@@ -1,15 +1,28 @@
 [
     {
-        "id": "0863311658cf6ff5",
-        "type": "tab",
-        "label": "WLAN Profile Generator (iOS)",
+        "id": "wifi_profile_tab",
+        "type": "ui_tab",
+        "name": "📱 WLAN Profile Generator",
+        "icon": "dashboard",
+        "order": 1,
         "disabled": false,
-        "info": "# iOS WLAN-Profil Generator Flow (Korrigiert)\n\nDieser korrigierte Flow funktioniert ohne 'scope.send' Fehler.\n\n## Änderungen:\n- ✅ Entfernung der problematischen scope.send Funktion\n- ✅ Fokus auf Browser-Download statt Node-RED Messages\n- ✅ Vollständige Tooltip-Integration\n- ✅ Alle Features funktionsfähig\n\n## Features:\n- ✅ Moderne Web-UI mit Glasmorphismus-Design\n- ✅ Vollständige WLAN-Konfiguration\n- ✅ Sicherheitsoptionen\n- ✅ DNS-Server Konfiguration\n- ✅ Proxy-Einstellungen\n- ✅ Apple-konforme XML-Generierung\n- ✅ Automatischer Download im Browser\n- ✅ Umfassende Tooltips\n- ✅ Debug-Logging (optional)\n\n## Verwendung:\n1. Dashboard öffnen: /ui\n2. Formular ausfüllen\n3. \"Profil Generieren\" klicken\n4. .mobileconfig Datei wird heruntergeladen\n\nKein scope.send Fehler mehr! 🎉"
+        "hidden": false
     },
     {
-        "id": "9940d60cb57caa3e",
+        "id": "wifi_profile_group",
+        "type": "ui_group",
+        "name": "iOS WLAN-Profil Generator",
+        "tab": "wifi_profile_tab",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "wifi_template_node",
         "type": "ui_template",
-        "z": "0863311658cf6ff5",
+        "z": "main_flow",
         "group": "wifi_profile_group",
         "name": "WLAN Profile Generator UI",
         "order": 1,
@@ -25,14 +38,14 @@
         "y": 100,
         "wires": [
             [
-                "140f41b8d924ddd8"
+                "debug_output"
             ]
         ]
     },
     {
-        "id": "140f41b8d924ddd8",
+        "id": "debug_output",
         "type": "debug",
-        "z": "0863311658cf6ff5",
+        "z": "main_flow",
         "name": "Profile Generated",
         "active": true,
         "tosidebar": true,
@@ -47,23 +60,10 @@
         "wires": []
     },
     {
-        "id": "wifi_profile_group",
-        "type": "ui_group",
-        "name": "iOS WLAN-Profil Generator",
-        "tab": "wifi_profile_tab",
-        "order": 1,
-        "disp": true,
-        "width": "24",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "wifi_profile_tab",
-        "type": "ui_tab",
-        "name": "WLAN Profile Generator (iOS)",
-        "icon": "dashboard",
-        "order": 1,
+        "id": "main_flow",
+        "type": "tab",
+        "label": "📱 iOS WLAN Profile Generator (Fixed)",
         "disabled": false,
-        "hidden": false
+        "info": "# iOS WLAN-Profil Generator Flow (Korrigiert)\n\nDieser korrigierte Flow funktioniert ohne 'scope.send' Fehler.\n\n## Änderungen:\n- ✅ Entfernung der problematischen scope.send Funktion\n- ✅ Fokus auf Browser-Download statt Node-RED Messages\n- ✅ Vollständige Tooltip-Integration\n- ✅ Alle Features funktionsfähig\n\n## Features:\n- ✅ Moderne Web-UI mit Glasmorphismus-Design\n- ✅ Vollständige WLAN-Konfiguration\n- ✅ Sicherheitsoptionen\n- ✅ DNS-Server Konfiguration\n- ✅ Proxy-Einstellungen\n- ✅ Apple-konforme XML-Generierung\n- ✅ Automatischer Download im Browser\n- ✅ Umfassende Tooltips\n- ✅ Debug-Logging (optional)\n\n## Verwendung:\n1. Dashboard öffnen: /ui\n2. Formular ausfüllen\n3. \"Profil Generieren\" klicken\n4. .mobileconfig Datei wird heruntergeladen\n\nKein scope.send Fehler mehr! 🎉"
     }
 ]
